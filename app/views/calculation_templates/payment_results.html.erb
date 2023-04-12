@@ -2,13 +2,13 @@
 
 <dl>
   <dt>APR</dt>
-  <dl><%= @apr %>%</dl>
+  <dl><%= number_to_percentage(@apr,precision: 4) %></dl>
   <dt>Number of years</dt>
   <dl><%= @year %></dl>
   <dt>Principal</dt>
-  <dl>$<%= @principle %></dl>
+  <dl><%= @principle.to_s(:currency) %></dl>
   <dt>Payment</dt>
-  <dl>$<%= @payment %></dl>
+  <dl><%= @payment.to_s(:currency)%></dl>
 </dl>
 
 <a href="/payment/new">Calculate another payment</a>
